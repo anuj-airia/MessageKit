@@ -79,7 +79,8 @@ open class MessagesViewController: UIViewController, UICollectionViewDelegateFlo
     setupInputBar(for: inputBarType)
     setupDelegates()
     addObservers()
-    addKeyboardObservers()
+    // remove keyboard observers to prevent incorrect scrolling as we use our own input message view
+    // addKeyboardObservers()
     addMenuControllerObservers()
     /// Layout input container view and update messagesCollectionViewInsets
     view.layoutIfNeeded()
